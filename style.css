@@ -1,0 +1,116 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#menu {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menuItem {
+    width: 24%;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid darkgray;
+}
+
+.tile {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    height: 64px;
+    width: 64px;
+    text-transform: uppercase;
+    font-size: 56px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 64px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.hintTaken {
+    border: 2px solid red;
+}
+
+.smallTile {
+    height: 24px;
+    width: 24px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.noBorder,
+.wodrleRow {
+    border: 1px solid gainsboro;
+    padding: 4px;
+    margin: 4px;
+    display: flex;
+    justify-content:space-around
+}
+.noBorder {
+    border: 0;
+    justify-content:start;
+}
+
+.lightGrayTile {
+    background-color: rgb(235, 235, 235);
+}
+
+.selectedTile {
+    border-color: red;
+}
+
+.keyBoardRow {
+    display: flex;
+    justify-content:center;
+    margin: 8px 0;
+}
+
+.keyBoardKey {
+    background-color: floralwhite;
+    border: 1px solid darkgray;
+    border-radius: 2px;
+    height: 44px;
+    width: 44px;
+}
+
+.darkGrayTile {
+    background-color: rgb(119, 119, 119);
+}
+
+.yellowTile {
+    background-color: gold;
+}
+
+.greenTile {
+    background-color: green;
+}
+
+summary h2 {
+    display: inline-block;
+    margin-left: 0.3em;
+}
+
+details .wodrleRow {
+    justify-content:start;
+}
+
+#keyBoard {
+    margin-top: 32px;
+}
+
+.flip {
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-name: flipFrames;
+}
+
+@keyframes flipFrames {
+    100% {transform: rotate(360deg);}
+  }
