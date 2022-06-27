@@ -1,98 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./classes.js"></script>
-    <script src="./wordsList.json"></script>
-    <script src="./script.js" defer></script>
-    <title>Alexes Wordle 2</title>
-</head>
-<body>
-    <section>
-        <div id="menu">
-            <button id="newGame" class="menuItem" title="Start a new game">New Game</button>
-            <button id="giveUp" class="menuItem" title="Give up the game and see the word">Give Up</button>
-            <button id="hint" class="menuItem" title="Get the next letter">Hint</button>
-            <button id="meaning" class="menuItem" title="Check word in Dictionary.com">Dictionary</button>
-        </div>
-    </section>
-    <section id="rules">
-        <details>
-            <summary>
-                <h2>Rules</h2>
-            </summary>
-            <p>
-                The rules are very simple: You need to guess the hidden five letter word in 6 tries. <br>
-                To get started, just type any five letter word on the first line and press Enter.<br>
-                If the letter is guessed correctly and is in the correct place, it will be highlighted in green, if the letter is in the word, but in the wrong
-                place - it will be in yellow, and if the letter is not in the word, it will be dark gray. <br><br>
-                Can you guess the hidden word in 6 tries?
-            </p>
-            <div class="wodrleRow">
-                <div class="tile darkGrayTile">D</div>
-                <div class="tile greenTile">R</div>
-                <div class="tile yellowTile">E</div>
-                <div class="tile yellowTile">A</div>
-                <div class="tile darkGrayTile">M</div>
-            </div>
-            <div style="border: 1px solid black;">
-                <div class="noBorder">
-                    <div class="tile smallTile darkGrayTile">D</div> and <div class="tile smallTile darkGrayTile">M</div> are not in the word
-                </div>
-                <div class="noBorder">
-                    <div class="tile smallTile greenTile">R</div> is in the word and is in the correct location
-                </div>
-                <div class="noBorder">
-                    <div class="tile smallTile yellowTile">E</div> and <div class="tile smallTile yellowTile">A</div> are in the word but at incorrect locations
-                </div>
-            </div>
-        </details>
-    </section>
-    <section id="game">
-        <h1>Wordle Game</h1>
 
-        <div id="rowsContainer" style="border: 1px solid black;" tabindex="-1">
-            
-        </div>
-    </section>
-    
-    <section id="keyBoard">
-        <div id="keyBoardRow1" class="keyBoardRow">
-            <button id="keyQ" class="keyBoardKey" data-key="113">Q</button>
-            <button id="keyW" class="keyBoardKey" data-key="119">W</button>
-            <button id="keyE" class="keyBoardKey" data-key="101">E</button>
-            <button id="keyR" class="keyBoardKey" data-key="114">R</button>
-            <button id="keyT" class="keyBoardKey" data-key="116">T</button>
-            <button id="keyY" class="keyBoardKey" data-key="121">Y</button>
-            <button id="keyU" class="keyBoardKey" data-key="117">U</button>
-            <button id="keyI" class="keyBoardKey" data-key="105">I</button>
-            <button id="keyO" class="keyBoardKey" data-key="111">O</button>
-            <button id="keyP" class="keyBoardKey" data-key="112">P</button>
-        </div>
-        <div id="keyBoardRow2" class="keyBoardRow">
-            <button id="keyA" class="keyBoardKey" data-key="97">A</button>
-            <button id="keyS" class="keyBoardKey" data-key="115">S</button>
-            <button id="keyD" class="keyBoardKey" data-key="100">D</button>
-            <button id="keyF" class="keyBoardKey" data-key="102">F</button>
-            <button id="keyG" class="keyBoardKey" data-key="103">G</button>
-            <button id="keyH" class="keyBoardKey" data-key="104">H</button>
-            <button id="keyJ" class="keyBoardKey" data-key="106">J</button>
-            <button id="keyK" class="keyBoardKey" data-key="107">K</button>
-            <button id="keyL" class="keyBoardKey" data-key="108">L</button>
-        </div>
-        <div id="keyBoardRow3" class="keyBoardRow">
-            <button id="keyBack" class="keyBoardKey" title="Back Space" data-key="8">⌫</button>
-            <button id="keyZ" class="keyBoardKey" data-key="122">Z</button>
-            <button id="keyX" class="keyBoardKey" data-key="120">X</button>
-            <button id="keyC" class="keyBoardKey" data-key="99">C</button>
-            <button id="keyV" class="keyBoardKey" data-key="118">V</button>
-            <button id="keyB" class="keyBoardKey" data-key="98">B</button>
-            <button id="keyN" class="keyBoardKey" data-key="110">N</button>
-            <button id="keyM" class="keyBoardKey" data-key="109">M</button>
-            <button id="keyEnter" class="keyBoardKey" title="Enter" data-key="13">⏎</button>
-        </div>
-    </section>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./classes.js"></script>
+        <script src="./wordsList.json"></script>
+        <script src="./script.js" defer></script>
+        <title>Alex's Wordle 2</title>
+    </head>
+
+    <body>
+        <section>
+            <div id="menu">
+                <button id="newGame" class="menuItem" title="Start a new game">New Game</button>
+                <button id="giveUp" class="menuItem" title="Give up the game and see the word">Give Up</button>
+                <button id="hint" class="menuItem" title="Get the next letter">Hint</button>
+                <button id="meaning" class="menuItem" title="Check word in Dictionary.com">Dictionary</button>
+            </div>
+        </section>
+        <section id="rules">
+            <details>
+                <summary>
+                    <h2>Rules</h2>
+                </summary>
+                <p>
+                    The rules are very simple: You need to guess the hidden five letter word in 6 tries. <br>
+                    To get started, just type any five letter word on the first line and press Enter.<br>
+                    If the letter is guessed correctly and is in the correct place, it will be highlighted in green, if
+                    the letter is in the word, but in the wrong
+                    place - it will be in yellow, and if the letter is not in the word, it will be dark gray. <br><br>
+                    Can you guess the hidden word in 6 tries?
+                </p>
+                <div class="wodrleRow">
+                    <div class="tile darkGrayTile">D</div>
+                    <div class="tile greenTile">R</div>
+                    <div class="tile yellowTile">E</div>
+                    <div class="tile yellowTile">A</div>
+                    <div class="tile darkGrayTile">M</div>
+                </div>
+                <div style="border: 1px solid black;">
+                    <div class="noBorder">
+                        <div class="tile smallTile darkGrayTile">D</div> and <div class="tile smallTile darkGrayTile">M
+                        </div> are not in the word
+                    </div>
+                    <div class="noBorder">
+                        <div class="tile smallTile greenTile">R</div> is in the word and is in the correct location
+                    </div>
+                    <div class="noBorder">
+                        <div class="tile smallTile yellowTile">E</div> and <div class="tile smallTile yellowTile">A
+                        </div> are in the word but at incorrect locations
+                    </div>
+                </div>
+            </details>
+        </section>
+        <section id="game">
+            <h1>Wordle Game</h1>
+
+            <div id="rowsContainer" style="border: 1px solid black;" tabindex="-1">
+
+            </div>
+        </section>
+
+        <section id="keyBoard">
+            <div id="keyBoardRow1" class="keyBoardRow">
+                <button id="keyQ" class="keyBoardKey" data-key="113">Q</button>
+                <button id="keyW" class="keyBoardKey" data-key="119">W</button>
+                <button id="keyE" class="keyBoardKey" data-key="101">E</button>
+                <button id="keyR" class="keyBoardKey" data-key="114">R</button>
+                <button id="keyT" class="keyBoardKey" data-key="116">T</button>
+                <button id="keyY" class="keyBoardKey" data-key="121">Y</button>
+                <button id="keyU" class="keyBoardKey" data-key="117">U</button>
+                <button id="keyI" class="keyBoardKey" data-key="105">I</button>
+                <button id="keyO" class="keyBoardKey" data-key="111">O</button>
+                <button id="keyP" class="keyBoardKey" data-key="112">P</button>
+            </div>
+            <div id="keyBoardRow2" class="keyBoardRow">
+                <button id="keyA" class="keyBoardKey" data-key="97">A</button>
+                <button id="keyS" class="keyBoardKey" data-key="115">S</button>
+                <button id="keyD" class="keyBoardKey" data-key="100">D</button>
+                <button id="keyF" class="keyBoardKey" data-key="102">F</button>
+                <button id="keyG" class="keyBoardKey" data-key="103">G</button>
+                <button id="keyH" class="keyBoardKey" data-key="104">H</button>
+                <button id="keyJ" class="keyBoardKey" data-key="106">J</button>
+                <button id="keyK" class="keyBoardKey" data-key="107">K</button>
+                <button id="keyL" class="keyBoardKey" data-key="108">L</button>
+            </div>
+            <div id="keyBoardRow3" class="keyBoardRow">
+                <button id="keyBack" class="keyBoardKey" title="Back Space" data-key="8">⌫</button>
+                <button id="keyZ" class="keyBoardKey" data-key="122">Z</button>
+                <button id="keyX" class="keyBoardKey" data-key="120">X</button>
+                <button id="keyC" class="keyBoardKey" data-key="99">C</button>
+                <button id="keyV" class="keyBoardKey" data-key="118">V</button>
+                <button id="keyB" class="keyBoardKey" data-key="98">B</button>
+                <button id="keyN" class="keyBoardKey" data-key="110">N</button>
+                <button id="keyM" class="keyBoardKey" data-key="109">M</button>
+                <button id="keyEnter" class="keyBoardKey" title="Enter" data-key="13">⏎</button>
+            </div>
+        </section>
+    </body>
+
 </html>
